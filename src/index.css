@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* --cx-font-work-sans-medium: "WorkSansRegular";
+  src: url("./fonts/Work_Sans/static/WorkSans-Regular.ttf"); */
+}
+@font-face {
+  font-family: "Druk Bold";
+  src: url("./fonts/Druk-Font-Family/Druk\ Text\ Family/DrukText-Bold-Trial.otf")
+    format("opentype");
+}
+:root {
+  --oliveGreen: #004236;
+  --cx-font-druk-bold: "Druk Bold";
+  --yellowGreen: #d6ce4b;
+}
+body {
+  color: var(--oliveGreen);
+}
+a {
+  all: unset;
+}
+
+.mainNav {
+  all: unset;
+  gap: 30px;
+  a,
+  li {
+    all: unset;
+    color: var(--oliveGreen);
+  }
+}
+.infoNav {
+  a {
+    all: unset;
+    color: #626262;
+  }
+}
+.slider {
+  color: var(--oliveGreen);
+  background-color: #f5ece6;
+}
+.mainText {
+  color: white;
+  font-family: var(--cx-font-druk-bold);
+  font-size: 5vw;
+  font-weight: bold;
+  letter-spacing: -0.07em;
+}
+.ShopNow {
+  background-color: var(--oliveGreen);
+  color: white;
+  font-size: 1.35vw;
+}
+.ShopNow:hover {
+  background-color: #d6ce4b;
+  color: var(--oliveGreen);
+}
+.header {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: white;
+  transition: top 0.5s;
+  font-weight: 500;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positions the dropdown just below the nav item */
+  left: -16px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  ul {
+    all: unset;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  span {
+    font-weight: 500;
+  }
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown {
+  display: flex;
+  gap: 10rem;
+}
+
+.category:hover {
+  border-bottom: 2px solid var(--oliveGreen);
+}
+.categories {
+  img {
+    height: 22rem;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  h5 {
+    letter-spacing: -1.4px;
+    font-weight: 800;
+    display: inline-block;
+    transform: scaleY(1.7);
+  }
+}
+/* .footer {
+  border-top: 1px solid var(--oliveGreen);
+  button {
+    background-color: var(--oliveGreen);
+    color: white;
+  }
+}
+.sub:hover {
+  background-color: var(--yellowGreen);
+} */
+.footer {
+  border-top: 1px solid var(--oliveGreen);
+  article {
+    width: 20%;
+  }
+  ul {
+    list-style-type: none;
+  }
+  p {
+    font-size: calc(1rem * 0.75);
+    text-align: center;
+  }
+}
