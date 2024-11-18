@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="p-3 d-flex flex-column gap-4 header ">
+    <header className="p-3 d-flex flex-column gap-4 header postition-relative">
       <div className="d-flex flex-wrap justify-content-between gap-lg-0 gap-3">
         <button
           className="d-flex justify-content-between py-1"
@@ -94,7 +94,7 @@ const Header = () => {
       <div className="d-flex flex-wrap justify-content-between">
         <nav>
           <ul className="d-flex flex-wrap mainNav">
-            <li className="position-relative nav-item">
+            <li className="nav-item">
               <Link to="/trending" className="py-2 category">
                 TRENDING
               </Link>
@@ -143,29 +143,385 @@ const Header = () => {
                 </div>
               </div>
             </li>
-            <li>
-              <Link to="/face">FACE</Link>
+            <li className="nav-item">
+              <Link to="/face" className="py-2 category">
+                FACE
+              </Link>
+              <div className="dropdown px-3 py-5">
+                <div>
+                  <span>Shop trending</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Virtual beauty services</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Refer a friend</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <Link to="/body">BODY</Link>
+            <li className="nav-item">
+              <Link to="/body" className="py-2 category">
+                BODY
+              </Link>
+              <div className="dropdown px-3 py-5">
+                <div>
+                  <span>Shop trending</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Virtual beauty services</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Refer a friend</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <Link>HAIR</Link>
+            <li className="nav-item">
+              <Link className="py-2 category">HAIR</Link>
+              <div className="dropdown px-3 py-5">
+                <div>
+                  <span>Shop trending</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Virtual beauty services</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Refer a friend</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <Link>MAKEUP</Link>
+            <li className="nav-item">
+              <Link className="py-2 category">MAKEUP</Link>
+              <div className="dropdown px-3 py-5">
+                <div>
+                  <span>Shop trending</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Virtual beauty services</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Refer a friend</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <Link>FRAGRANCE</Link>
+            <li className="nav-item">
+              <Link className="py-2 category">FRAGRANCE</Link>
+              <div className="dropdown px-3 py-5">
+                <div>
+                  <span>Shop trending</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Virtual beauty services</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Refer a friend</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <Link>CHRISTMAS GIFTS</Link>
+            <li className="nav-item">
+              <Link className="py-2 category">CHRISTMAS GIFTS</Link>
+              <div className="dropdown px-3 py-5">
+                <div>
+                  <span>Shop trending</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Virtual beauty services</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Refer a friend</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <Link>RANGE</Link>
+            <li className="nav-item">
+              <Link className="py-2 category">RANGE</Link>
+              <div className="dropdown px-3 py-5">
+                <div>
+                  <span>Shop trending</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Virtual beauty services</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Refer a friend</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li>
-              <Link>OFFERS</Link>
+            <li className="nav-item">
+              <Link className="py-2 category">OFFERS</Link>
+              <div className="dropdown px-3 py-5">
+                <div>
+                  <span>Shop trending</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Virtual beauty services</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <span>Refer a friend</span>
+                  <ul>
+                    <li>
+                      <a href="#">Product 1 and so on</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Product 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>

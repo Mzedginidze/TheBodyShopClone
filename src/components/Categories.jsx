@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Categories = ({ resolvedData, neededCategories }) => {
+const Categories = ({ resolvedData, neededCategories, name }) => {
   const filterdData = resolvedData.filter((category) =>
     neededCategories.find((item) => item === category.name)
   );
@@ -9,7 +9,10 @@ const Categories = ({ resolvedData, neededCategories }) => {
   return (
     <section className="d-flex flex-wrap justify-content-between">
       {filterdData.map((item) => (
-        <Link style={{ width: "32%" }}>
+        <Link
+          to={`/${name}/${item.name.replace(/\s+/g, "-").toLowerCase()}`}
+          style={{ width: "32%" }}
+        >
           <article className="categories mb-5">
             <img src={item.image} alt={item.name} className="mb-3"></img>
             <h5>{item.name.toUpperCase()}</h5>
