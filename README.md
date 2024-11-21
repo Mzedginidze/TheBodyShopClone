@@ -1,4 +1,4 @@
 # React + Vite
 
 # Link
-[project website]((https://thebodyshop.netlify.app/))
+[project website](https://thebodyshop.netlify.app/)
