@@ -4,8 +4,10 @@ import Categories from "../../components/Categories";
 
 const Body = () => {
   const neededCategories = ["shower gels", "body moisturisers", "body butters"];
-  const categories = useLoaderData();
   const name = "body";
+  console.log(name);
+  const categories = useLoaderData();
+
   return (
     <div className="p-3">
       <section className="d-flex flex-wrap mb-5 justify-content-between">

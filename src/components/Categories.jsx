@@ -8,10 +8,11 @@ const Categories = ({ resolvedData, neededCategories, name }) => {
 
   return (
     <section className="d-flex flex-wrap justify-content-between">
-      {filterdData.map((item) => (
+      {filterdData.map((item, index) => (
         <Link
           to={`/${name}/${item.name.replace(/\s+/g, "-").toLowerCase()}`}
           style={{ width: "32%" }}
+          key={index}
         >
           <article className="categories mb-5">
             <img src={item.image} alt={item.name} className="mb-3"></img>

@@ -242,7 +242,9 @@ const Header = () => {
               </div>
             </li>
             <li className="nav-item">
-              <Link className="py-2 category">HAIR</Link>
+              <Link to="/hair" className="py-2 category">
+                HAIR
+              </Link>
               <div className="dropdown px-3 py-5">
                 <div>
                   <span>Shop trending</span>
