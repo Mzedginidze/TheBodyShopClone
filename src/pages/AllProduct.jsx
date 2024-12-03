@@ -1,12 +1,10 @@
-import Filter from "../../components/Filter";
+import FilterForAll from "../components/FilterForAll";
 import { useLoaderData } from "react-router-dom";
 import React from "react";
 import { Await } from "react-router-dom";
 
-const BodyButters = () => {
+const AllProduct = () => {
   const products = useLoaderData();
-
-  const category = "body butters";
 
   return (
     <div className="p-3">
@@ -15,7 +13,7 @@ const BodyButters = () => {
           style={{ width: "45%" }}
           className="d-flex flex-column justify-content-center"
         >
-          <h3>body butters</h3>
+          <h3>Products</h3>
           <p>
             Bestsellers like our Hemp Hand Protector, Coconut Body Butter and
             Ginger Anti-Dandruff Shampoo have been flying off our shelves and
@@ -42,13 +40,11 @@ const BodyButters = () => {
         }
       >
         <Await resolve={products.data}>
-          {(resolvedData) => (
-            <Filter resolvedData={resolvedData} category={category} />
-          )}
+          {(resolvedData) => <FilterForAll resolvedData={resolvedData} />}
         </Await>
       </React.Suspense>
     </div>
   );
 };
 
-export default BodyButters;
+export default AllProduct;

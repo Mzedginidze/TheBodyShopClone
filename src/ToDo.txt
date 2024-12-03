@@ -1,0 +1,18 @@
+1. search by name is case sensitive                              done  
+2. on sale does not work as expected                             done
+3. add more products     
+4. products must also be filtered by category                    done
+5. products design                                               done
+6. pagination                                                    done
+7. products per page                                             done
+8. filter design                                                 done
+9. fill pages                                                    done
+10. log out button on profile
+11. product per page after delete stuck to 1
+12. favorite products
+13. buy                                                          done
+14. admin panel
+15. on edit validation needed (number and email)                 done
+16. on registrartion validation needed (email)                   done
+17. remove dropdown on header
+18. unused links

@@ -3,10 +3,10 @@ import { useLoaderData } from "react-router-dom";
 import React from "react";
 import { Await } from "react-router-dom";
 
-const BodyButters = () => {
-  const products = useLoaderData();
+const HairStyling = () => {
+  const hairStyling = useLoaderData();
 
-  const category = "body butters";
+  const category = "hair styling";
 
   return (
     <div className="p-3">
@@ -15,7 +15,7 @@ const BodyButters = () => {
           style={{ width: "45%" }}
           className="d-flex flex-column justify-content-center"
         >
-          <h3>body butters</h3>
+          <h3>hair styling</h3>
           <p>
             Bestsellers like our Hemp Hand Protector, Coconut Body Butter and
             Ginger Anti-Dandruff Shampoo have been flying off our shelves and
@@ -41,7 +41,7 @@ const BodyButters = () => {
           </div>
         }
       >
-        <Await resolve={products.data}>
+        <Await resolve={hairStyling.data}>
           {(resolvedData) => (
             <Filter resolvedData={resolvedData} category={category} />
           )}
@@ -51,4 +51,4 @@ const BodyButters = () => {
   );
 };
 
-export default BodyButters;
+export default HairStyling;

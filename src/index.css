@@ -4,11 +4,11 @@
   /* --cx-font-work-sans-medium: "WorkSansRegular";
   src: url("./fonts/Work_Sans/static/WorkSans-Regular.ttf"); */
 }
-@font-face {
+/* @font-face {
   font-family: "Druk Bold";
   src: url("./fonts/Druk-Font-Family/Druk\ Text\ Family/DrukText-Bold-Trial.otf")
     format("opentype");
-}
+} */
 :root {
   --oliveGreen: #004236;
   --cx-font-druk-bold: "Druk Bold";
@@ -19,6 +19,7 @@ body {
 }
 a {
   all: unset;
+  cursor: pointer;
 }
 
 .mainNav {
@@ -28,12 +29,14 @@ a {
   li {
     all: unset;
     color: var(--oliveGreen);
+    cursor: pointer;
   }
 }
 .infoNav {
   a {
     all: unset;
     color: #626262;
+    cursor: pointer;
   }
 }
 .slider {
@@ -131,4 +134,70 @@ a {
     font-size: calc(1rem * 0.75);
     text-align: center;
   }
+}
+.login {
+  all: unset;
+  border-bottom: 1px solid;
+  background: #f8f3e8;
+  width: 100%;
+}
+.signin {
+  background-color: var(--oliveGreen);
+  height: 3rem;
+  border: 0;
+  color: white;
+  border-radius: 4px;
+}
+.signin:hover {
+  background-color: var(--yellowGreen);
+}
+.editButton {
+  background: var(--oliveGreen);
+  color: white;
+}
+.editButton:hover {
+  background: var(--yellowGreen);
+}
+.edit {
+  background: var(--oliveGreen);
+  color: white;
+  width: 60%;
+}
+.input {
+  width: 45%;
+}
+.option {
+  all: unset;
+  background: var(--yellowGreen);
+  border-radius: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.count[type="number"]::-webkit-outer-spin-button,
+.count[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: auto;
+}
+.pagination {
+  --bs-pagination-active-bg: var(--oliveGreen);
+}
+.heart {
+  all: unset;
+  margin-right: 1rem;
+}
+.cart {
+  border: 1px solid black;
+}
+.cart:hover {
+  background-color: var(--oliveGreen);
+  color: white;
+}
+.cartItem {
+  border-top: #004236 1px solid;
+}
+.total {
+  border-bottom: #004236 2px solid;
 }
