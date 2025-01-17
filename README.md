@@ -1,6 +1,6 @@
 # The Body Shop Web Page Clone
 
-Welcome to **The Body Shop Web Page Clone**, a replica of the popular e-commerce website for eco-friendly and cruelty-free beauty products. This project showcases my front-end development skills and demonstrates my ability to build responsive, user-friendly web pages.
+Welcome to **The Body Shop Web Page Clone**, a replica of the popular e-commerce website for eco-friendly and cruelty-free beauty products. This project showcases my front-end development skills and demonstrates my ability to build functional, user-friendly web pages.
 
 ---
 
