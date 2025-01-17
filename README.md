@@ -14,7 +14,6 @@ Welcome to **The Body Shop Web Page Clone**, a replica of the popular e-commerce
 - 🛍️ **Cart Functionality**: Add, remove, and manage products in a shopping cart.
 - ❤️ **Loved Products**: Save favorite products for easy access later.
 - 🛠️ **Admin Panel**: A dedicated dashboard for administrators to add, edit, or remove products and manage the product catalog.
-- 📱 **Responsive Design**: Fully optimized for desktop, tablet, and mobile views.
 - 🎨 **Interactive Elements**: Navigation menus, hover effects, and smooth scrolling.
 
 ---
