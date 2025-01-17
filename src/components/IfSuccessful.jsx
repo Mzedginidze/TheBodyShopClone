@@ -9,6 +9,7 @@ const IfSuccessful = () => {
 
   const viewBasket = () => {
     navigate("/cart");
+    window.scrollTo(0, 0);
     setIsOpenSuccess(false);
   };
 

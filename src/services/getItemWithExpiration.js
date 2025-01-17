@@ -15,6 +15,7 @@ export const getItemWithExpiration = (key) => {
 
   if (now.getTime() > item.expiry) {
     localStorage.removeItem(key);
+    window.location.reload();
     return null;
   }
 

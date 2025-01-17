@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* --cx-font-work-sans-medium: "WorkSansRegular";
-  src: url("./fonts/Work_Sans/static/WorkSans-Regular.ttf"); */
 }
 /* @font-face {
   font-family: "Druk Bold";
@@ -42,6 +40,7 @@ a {
 .slider {
   color: var(--oliveGreen);
   background-color: #f5ece6;
+  height: 40px;
 }
 .mainText {
   color: white;
@@ -66,11 +65,12 @@ a {
   background-color: white;
   transition: top 0.5s;
   font-weight: 500;
+  height: 116px;
 }
 .dropdown {
   display: none;
   position: absolute;
-  top: 100%; /* Positions the dropdown just below the nav item */
+  top: 100%;
   left: 0;
   right: 0;
   background-color: #fff;
@@ -89,7 +89,6 @@ a {
   }
 }
 
-/* Show dropdown on hover */
 .nav-item:hover .dropdown {
   display: flex;
   gap: 10rem;
@@ -196,8 +195,37 @@ input::-webkit-inner-spin-button {
   color: white;
 }
 .cartItem {
-  border-top: #004236 1px solid;
+  border-top: var(--oliveGreen) 1px solid;
 }
 .total {
-  border-bottom: #004236 2px solid;
+  border-bottom: var(--oliveGreen) 2px solid;
+}
+.heart:hover svg path {
+  fill: var(--oliveGreen);
+}
+.onSale {
+  background: red;
+  color: white;
+}
+/* .admin {
+  position: absolute;
+  top: 156px;
+  left: 0;
+  width: 100%;
+} */
+.about {
+  background-color: #f8f3e8;
+  h1 {
+    font-weight: bold;
+    font-size: 5rem;
+    letter-spacing: -2px;
+  }
+  h2 {
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 0;
+  }
 }

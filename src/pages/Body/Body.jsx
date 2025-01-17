@@ -5,7 +5,6 @@ import Categories from "../../components/Categories";
 const Body = () => {
   const neededCategories = ["shower gels", "body moisturisers", "body butters"];
   const name = "body";
-  console.log(name);
   const categories = useLoaderData();
 
   return (

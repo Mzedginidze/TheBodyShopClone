@@ -16,7 +16,7 @@ const FilterForAll = ({ resolvedData }) => {
     sale: searchParams.get("sale") === true,
     product: searchParams.get("product") || "",
     category: searchParams.get("category") || "",
-    productsPerPage: Number(searchParams.get("productsPerPage")) || 10,
+    productsPerPage: Number(searchParams.get("productsPerPage")) || 20,
   });
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -40,7 +40,7 @@ const FilterForAll = ({ resolvedData }) => {
       priceTo: "",
       product: "",
       category: "",
-      productsPerPage: 10,
+      productsPerPage: 20,
     }));
   }, []);
 
@@ -86,7 +86,7 @@ const FilterForAll = ({ resolvedData }) => {
     const { name, value, type, checked } = e.target;
     const sanitizedValue =
       name === "productsPerPage"
-        ? Math.max(1, Math.min(20, Number(value)))
+        ? Math.max(12, Math.min(30, Number(value)))
         : value;
 
     setFilter((preFilter) => ({
@@ -102,10 +102,11 @@ const FilterForAll = ({ resolvedData }) => {
       priceFrom: newValue[0],
       priceTo: newValue[1],
     }));
+    setCurrentPage(1);
   };
   return (
     <div className="d-flex flex-column flex-wrap align-items-center">
-      <form className="d-flex flex-wrap justify-content-between align-items-center my-5 border-top border-success p-4 w-100">
+      <form className="d-flex flex-wrap justify-content-between align-items-center my-5 border-top border-success py-4 w-100">
         <div>
           <label htmlFor="product" className="me-2">
             Search by name:
@@ -145,11 +146,23 @@ const FilterForAll = ({ resolvedData }) => {
           </label>
 
           <select name="category" id="category" onChange={handleChange}>
-            <option value=""></option>
+            <option value="">all</option>
             <option value="bestsellers">Bestsellers</option>
             <option value="new">New</option>
             <option value="top rated">Top Rated</option>
             <option value="view all face">View All Face</option>
+            <option value="subscribe & save">subscribe & save</option>
+            <option value="moisturisers">moisturisers</option>
+            <option value="cleansers & toners">cleansers & toners</option>
+            <option value="face masks">face masks</option>
+            <option value="serums & essences">serums & essences</option>
+            <option value="skincare with spf">skincare with SPF</option>
+            <option value="shower gels">shower gels</option>
+            <option value="body moisturisers">body moisturisers</option>
+            <option value="body butters">body butters</option>
+            <option value="shampoo">shampoo</option>
+            <option value="conditioner">conditioner</option>
+            <option value="hair styling">hair styling</option>
           </select>
         </div>
         <div>
@@ -160,8 +173,8 @@ const FilterForAll = ({ resolvedData }) => {
             id="products-per-page"
             name="productsPerPage"
             type="number"
-            min={1}
-            max={20}
+            min={12}
+            max={30}
             onChange={handleChange}
           />
         </div>

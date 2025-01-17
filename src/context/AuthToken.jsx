@@ -11,7 +11,6 @@ const AuthTokenProvider = ({ children }) => {
   }
 
   const [token, setToken] = useState(json);
-  console.log(token);
 
   useEffect(() => {
     const storedData = getItemWithExpiration("access_token");

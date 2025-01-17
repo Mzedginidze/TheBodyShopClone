@@ -3,11 +3,25 @@ import { useLoaderData, Await } from "react-router-dom";
 import { IsOpen } from "../../context/IsOpen";
 import EditPersonalInfo from "../../components/EditPersonalInfo";
 import { useNavigate } from "react-router-dom";
+import { AuthToken } from "../../context/AuthToken";
 
 const Profile = () => {
   const profile = useLoaderData();
   const { isOpen, setIsOpen } = useContext(IsOpen);
   const navigate = useNavigate();
+  const { setToken } = useContext(AuthToken);
+
+  const logout = () => {
+    localStorage.removeItem("access_token");
+    setToken("");
+    navigate("/login");
+    window.scrollTo(0, 0);
+  };
+  if (!profile) {
+    navigate("/login");
+    window.scrollTo(0, 0);
+    return;
+  }
 
   return (
     <>
@@ -74,8 +88,8 @@ const Profile = () => {
                     Purchase History
                   </h3>
                   <ul>
-                    <li>Total items: {sumOfPrice()}</li>
-                    <li>Total amount: {sumOfItems()}</li>
+                    <li>Total items: {sumOfItems()}</li>
+                    <li>Total amount: {sumOfPrice()}</li>
                   </ul>
                 </div>
               );
@@ -91,14 +105,11 @@ const Profile = () => {
           </button>
           <button
             className="btn editButton col-12"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/wishList")}
           >
-            View Favoorites
+            View Wish List
           </button>
-          <button
-            className="btn editButton col-12"
-            onClick={() => navigate("/")}
-          >
+          <button className="btn editButton col-12" onClick={logout}>
             Log Out
           </button>
         </div>

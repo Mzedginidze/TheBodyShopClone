@@ -17,7 +17,7 @@ const Filter = ({ resolvedData, category }) => {
     priceTo: searchParams.get("priceTo") || "",
     sale: searchParams.get("sale") === true,
     product: searchParams.get("product") || "",
-    productsPerPage: Number(searchParams.get("productsPerPage")) || 10,
+    productsPerPage: Number(searchParams.get("productsPerPage")) || 8,
   });
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Filter = ({ resolvedData, category }) => {
       priceFrom: "",
       priceTo: "",
       product: "",
-      productsPerPage: 10,
+      productsPerPage: 8,
     }));
   }, []);
 
@@ -81,7 +81,7 @@ const Filter = ({ resolvedData, category }) => {
     const { name, value, type, checked } = e.target;
     const sanitizedValue =
       name === "productsPerPage"
-        ? Math.max(1, Math.min(20, Number(value)))
+        ? Math.max(8, Math.min(20, Number(value)))
         : value;
 
     setFilter((preFilter) => ({
@@ -97,6 +97,7 @@ const Filter = ({ resolvedData, category }) => {
       priceFrom: newValue[0],
       priceTo: newValue[1],
     }));
+    setCurrentPage(1);
   };
   return (
     <div className="d-flex flex-column flex-wrap align-items-center">
@@ -143,7 +144,7 @@ const Filter = ({ resolvedData, category }) => {
             id="products-per-page"
             name="productsPerPage"
             type="number"
-            min={1}
+            min={8}
             max={20}
             onChange={handleChange}
           />

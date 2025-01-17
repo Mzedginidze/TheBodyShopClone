@@ -5,12 +5,14 @@ import NewestInfo from "../components/NewestInfo";
 
 const Layout = () => {
   return (
-    <>
+    <div className="min-vh-100 d-flex flex-column justify-content-between">
       <Header />
       <NewestInfo />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

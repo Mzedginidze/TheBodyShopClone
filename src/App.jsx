@@ -10,7 +10,7 @@ import Trending from "./pages/Trending/Trending";
 import Face from "./pages/face/Face";
 import Body from "./pages/Body/Body";
 import "bootstrap/dist/css/bootstrap.css";
-import { loadCart, loadCategories } from "./services/loaders/loaders.jsx";
+import { loadCart, loadCategories } from "./services/loaders/loaders";
 import Bestsellers from "./pages/Trending/Bestsellers";
 import Maintrending from "./pages/Trending/Maintrending";
 import Mainbody from "./pages/Body/Mainbody";
@@ -32,18 +32,27 @@ import MainHair from "./pages/Hair/MainHair";
 import Shampoo from "./pages/Hair/Shampoo";
 import Conditioner from "./pages/Hair/Conditioner";
 import HairStyling from "./pages/Hair/HairStyling";
-import { loadProducts } from "./services/loaders/loaders.jsx";
+import { loadProducts } from "./services/loaders/loaders";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Profile from "./pages/auth/Profile";
 import Auth from "./pages/auth/Auth";
 import { AuthTokenProvider } from "./context/AuthToken";
-import ProtectedRoute from "./components/ProtectedRoute";
-import { combinedLoader } from "./services/loaders/loaders.jsx";
+import { combinedLoader, loadFavorites } from "./services/loaders/loaders";
 import { IsOpenProvider } from "./context/IsOpen";
 import AllProduct from "./pages/AllProduct";
-import Cart from "./pages/Cart";
+import Cart from "./pages/auth/Cart";
 import { IsOpenSuccessProvider } from "./context/IsOpenSuccess";
+import ProtectedRoute from "./utility/ProtectedRoute";
+import Favorite from "./pages/auth/Favorite";
+import ProductDetails from "./pages/ProductDetails";
+import Admin from "./pages/admin/Admin";
+import Dashboard from "./pages/admin/Dashboard";
+import Products from "./pages/admin/Products";
+import { EditingProductProvider } from "./context/EditingProduct";
+import AddProduct from "./pages/admin/AddProduct";
+import RemoveProduct from "./pages/admin/RemoveProduct";
+import About from "./pages/About";
 
 const App = () => {
   const route = createBrowserRouter(
@@ -139,19 +148,37 @@ const App = () => {
           <Route index element={<Login />} />
           <Route path="register" element={<Register />} />
         </Route>
-
-        <Route element={<ProtectedRoute />}>
-          <Route path="profile" element={<Profile />} loader={combinedLoader} />
-          <Route path="cart" element={<Cart />} loader={loadCart} />
-        </Route>
-
-        {/* <Route path="cart" element={<Cart />} loader={loadCart} /> */}
-
         <Route
           path="allproduct"
           element={<AllProduct />}
           loader={loadProducts}
         />
+
+        <Route element={<ProtectedRoute />}>
+          <Route path="profile" element={<Profile />} loader={combinedLoader} />
+          <Route path="cart" element={<Cart />} loader={loadCart} />
+          <Route
+            path="wishList"
+            element={<Favorite />}
+            loader={loadFavorites}
+          />
+          <Route path="adminPanel" element={<Admin />}>
+            <Route index element={<Dashboard />} loader={combinedLoader} />
+            <Route
+              path="products"
+              element={<Products />}
+              loader={loadProducts}
+            />
+            <Route path="addProduct" element={<AddProduct />} />
+            <Route path="removeProduct" element={<RemoveProduct />} />
+          </Route>
+        </Route>
+        <Route
+          path="product/:id"
+          element={<ProductDetails />}
+          loader={loadProducts}
+        />
+        <Route path="about" element={<About />} />
       </Route>
     )
   );
@@ -159,7 +186,9 @@ const App = () => {
     <AuthTokenProvider>
       <IsOpenSuccessProvider>
         <IsOpenProvider>
-          <RouterProvider router={route}></RouterProvider>;
+          <EditingProductProvider>
+            <RouterProvider router={route}></RouterProvider>;
+          </EditingProductProvider>
         </IsOpenProvider>
       </IsOpenSuccessProvider>
     </AuthTokenProvider>

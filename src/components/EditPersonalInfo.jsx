@@ -54,7 +54,7 @@ const EditPersonalInfo = ({ profile }) => {
   return (
     <form className="position-fixed top-50 start-50 translate-middle p-4 border rounded d-flex flex-wrap gap-4 edit justify-content-between">
       <div className="mb-3 input">
-        <label for="first_name" className="form-label">
+        <label htmlFor="first_name" className="form-label">
           Edit first name:
         </label>
         <input
@@ -66,7 +66,7 @@ const EditPersonalInfo = ({ profile }) => {
         />
       </div>
       <div className="mb-3 input">
-        <label for="last_name" className="form-label">
+        <label htmlFor="last_name" className="form-label">
           Edit last name:
         </label>
         <input
@@ -78,7 +78,7 @@ const EditPersonalInfo = ({ profile }) => {
         />
       </div>
       <div className="mb-3 input">
-        <label for="email" className="form-label">
+        <label htmlFor="email" className="form-label">
           Edit email adress:
         </label>
         <input
@@ -91,7 +91,7 @@ const EditPersonalInfo = ({ profile }) => {
         />
       </div>
       <div className="mb-3 input">
-        <label for="number" className="form-label">
+        <label htmlFor="number" className="form-label">
           Edit phone number:
         </label>
         <input
@@ -106,7 +106,7 @@ const EditPersonalInfo = ({ profile }) => {
         />
       </div>
       <div className="mb-3 position-relative input">
-        <label for="password" className="form-label">
+        <label htmlFor="password" className="form-label">
           Edit password:
         </label>
         <input
@@ -125,7 +125,7 @@ const EditPersonalInfo = ({ profile }) => {
             top: "70%",
             transform: "translateY(-50%)",
             cursor: "pointer",
-            color: "#555", // Optional styling for the icon
+            color: "#555",
           }}
         >
           {showPassword ? "👁️" : "🙈"}

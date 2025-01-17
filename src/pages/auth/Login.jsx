@@ -55,6 +55,7 @@ const Login = () => {
         localStorage.setItem("access_token", JSON.stringify(item));
         setToken(json.access_token);
         navigate("/profile");
+        window.scrollTo(0, 0);
       }
     } catch (err) {
       console.error(err.message);

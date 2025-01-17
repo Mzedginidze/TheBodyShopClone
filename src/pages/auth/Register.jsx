@@ -60,6 +60,7 @@ const Register = () => {
         setToken(json.access_token);
         localStorage.setItem("access_token", JSON.stringify(item));
         navigate("/profile");
+        window.scrollTo(0, 0);
       } else {
         setAnswer("Something went wrong");
       }
@@ -134,7 +135,7 @@ const Register = () => {
               top: "50%",
               transform: "translateY(-50%)",
               cursor: "pointer",
-              color: "#555", // Optional styling for the icon
+              color: "#555",
             }}
           >
             {showPassword ? "👁️" : "🙈"}
