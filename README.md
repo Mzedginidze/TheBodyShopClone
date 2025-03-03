@@ -18,6 +18,14 @@ Welcome to **The Body Shop Web Page Clone**, a replica of the popular e-commerce
 
 ---
 
+## 🎥 Video Demonstration
+
+A demonstration video showcasing the project's functionality and features is available. Click the link below to watch it:
+
+[Watch the Video](https://vimeo.com/1062108739/18792bd56d)
+
+---
+
 ## 🛠️ Tech Stack
 
 - **HTML5**: Semantic structure and accessibility.
@@ -33,8 +41,5 @@ Welcome to **The Body Shop Web Page Clone**, a replica of the popular e-commerce
 
 This project relies on an API for data, which has not been deployed to a live server. As a result, the project cannot currently be hosted online.
 
-A **video demonstration** showcasing the project’s functionality and features is in progress and will be available soon. Stay tuned!
-
-
-
+A **video demonstration** showcasing the project’s functionality and features is now available (see above).
 
